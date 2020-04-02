@@ -1,0 +1,54 @@
+.contenedor-nosotros {
+	margin-top: 6rem !important;
+}
+
+.media-nosotros {
+	width: 430px;
+	height: auto;
+	border-radius: 15px;
+	object-fit: cover;
+	max-width: 100%;
+
+}
+
+.media-body {
+	margin-left: 2rem;
+}
+
+.media-pic-2 {
+	float: right;
+}
+
+.text-adjust {
+	margin: 0;
+	position: relative;
+	top: 15%;
+	transition: 3s;
+	font-size: 140%;
+}
+
+
+.color-brand {
+	color: #389BEF;
+	font-size: 5vw;
+}
+
+
+
+@media only screen and (max-width: 992px) {
+	.media-pic-2 {
+		float: none;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.media-pic-1 {
+		text-align: center;
+		margin: 0 auto !important;
+	}
+
+	.fila-del-medio {
+		flex-direction: column-reverse;
+		
+	}
+}

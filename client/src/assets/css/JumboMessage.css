@@ -1,0 +1,31 @@
+.jumbo-message {
+    position: relative;
+    top: 2.3rem;
+    background: #fff !important;
+    /* background-image: url(../img/jumbo-bg.webp); */
+    background-size: cover;
+    background-position: center;
+    opacity: .9;
+    color: #212121;
+}
+
+.jumbo-header {
+  font-size: 8rem;
+  font-weight: 900;
+}
+
+.jumbo-text {
+  font-size: 2rem !important;
+  font-style: italic;
+  font-weight: 800;
+}
+
+  @media only screen and (max-width: 515px) {
+    div h1 {
+      font-size: 11vw !important;
+    }
+
+    div p {
+      font-size: 4.5vw !important;
+    }
+  }

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
+
+body {
+    margin: 0;
+    width: 100%;
+  }
+
+.navig {
+    font-weight: 700;
+}
+
+.efege-logo {
+    width: 80px;
+    transform: scale(1.4);
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    top: .2rem;
+}
+
+.sticky-wrapper {
+    position: relative;
+    height: 6rem; /* We need to change this value */
+    z-index: 2;
+  }
+  
+  .sticky .sticky-inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding-left: 5.6rem;
+  }
+
+  .nav-link {
+    transition: 1s;
+  }
+
+  .nav-link-noticia {
+    background: #D6D87B;
+    border-radius: 6px;
+    position: relative;
+    bottom: .8rem;
+    left: 4rem;
+  }
+
+  .nav-link-noticia:hover {
+    color: #ffffff !important;
+  }
+
+  .nav-link-noticia-home:hover {
+    color: #ffffff !important;
+  }

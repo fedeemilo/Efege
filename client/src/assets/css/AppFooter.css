@@ -1,0 +1,50 @@
+.footer-efege {
+    background: 'black';
+}
+
+.icon {
+    width: 22px;
+}
+
+.nav-items p {
+    font-size: 20px;
+    margin-top: 25.5px;
+}
+
+.nav-items a {
+    color: rgb(76, 68, 68);
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: black !important;
+}
+
+.lista-contacto {
+    list-style: none;
+}
+
+.lista-contacto li {
+    margin-top: .2rem;
+    margin-left: -3rem;
+    display: flex;
+}
+
+.lista-contacto li p {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.lista-contacto.redes li {
+    display: inline;
+    margin: 2rem;
+}
+
+.lista-contacto.redes .icon {
+    width: 40px;
+}
+
+.headers-footer {
+    color: #3696E9;
+    font-weight: 800;
+}

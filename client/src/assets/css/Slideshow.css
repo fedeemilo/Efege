@@ -1,0 +1,74 @@
+.slide-container {
+	margin-top: -.5rem;
+}
+
+.each-slide > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: cover;
+	height: 28rem;
+}
+
+.each-slide span {
+	padding: 30px;
+	font-size: 45px;
+	font-weight: 800;
+	background: #efefef;
+	text-align: center;
+	border-radius: 10px;
+	width: 100%;
+}
+
+.each-slide h4 {
+	font-size: 17px;
+}
+
+.content-slide h4 {
+	font-size: 19px;
+	text-align: center;
+	padding-top: 4px;
+}
+
+.slide-background-1,
+.slide-background-2,
+.slide-background-3 {
+	position: relative;
+	z-index: 1;
+}
+
+.slide-background-1 .bg,
+.slide-background-2 .bg,
+.slide-background-3 .bg {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0.8;
+	width: 100%;
+	height: 100%;
+}
+
+.slide-background-1 .bg {
+	background: url(../img/web-slide-1.webp) fixed no-repeat 50% 50%;
+}
+
+.slide-background-2 .bg {
+	background: url(../img/web-slide-2.webp) fixed no-repeat 50% 50%;
+}
+
+.slide-background-3 .bg {
+	background: url(../img/web-slide-3.webp) fixed no-repeat 50% 50%;
+}
+
+@media only screen and (max-width: 568px) {
+	.content-slide h4 {
+		font-size: 5vw !important;
+	}
+
+	.content-slide span {
+		font-size: 7vw !important;
+	}
+}
