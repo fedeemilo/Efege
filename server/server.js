@@ -11,12 +11,8 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const cors = require('cors');
 
-const fs = require('fs')
-const FILE_PATH = 'stats.json'
-
 const app = express();
 const PORT = process.env.PORT || 3002;
-
 
 // connect to database
 mongoose.connect(process.env.MONGODB_URL, {
@@ -78,12 +74,6 @@ router.post('/send', (req, res, next) => {
 		}
 	});
 });
-
-// test visitas
-router.get('/api', (req, res, next) => {
-	res.json({visit: 'new visit!'});
-});
-
 
 // mount routes
 app.use('/news', news);

@@ -10,8 +10,9 @@
 }
 
 .jumbo-header {
-  font-size: 8rem;
+  font-size: 5.5rem;
   font-weight: 900;
+  opacity: .9;
 }
 
 .jumbo-text {

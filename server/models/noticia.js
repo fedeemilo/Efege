@@ -6,7 +6,8 @@ const NoticiaSchema = new Schema({
 	subtitle: String,
 	description: String,
 	images: [{ url: String, public_id: String }],
-	author: String
+	author: String,
+	date: Date
 });
 
 module.exports = mongoose.model('Noticia', NoticiaSchema);

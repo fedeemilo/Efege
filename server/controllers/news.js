@@ -14,7 +14,6 @@ module.exports = {
 
 	async newsCreate(req, res, next) {
         req.body.images = [];
-        console.log(req.files);
 		for (const file of req.files) {
 			let image = await cloudinary.uploader.upload(file.path);
 			req.body.images.push({
@@ -22,6 +21,8 @@ module.exports = {
 				public_id: image.public_id
 			});
 		}
+
+		req.body.date = new Date();
 
 		let news = await Noticia.create(req.body);
 		// save created Noticia to database

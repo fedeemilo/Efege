@@ -27,11 +27,7 @@ const Slideshow = () => {
 							</span>
 							<h4
 								className='text-center'
-								style={{
-									fontSize: '1.5rem',
-									position: 'relative',
-									bottom: '1.2rem'
-								}}
+								
 							>
 								que se adaptan a tu negocio
 							</h4>
@@ -49,12 +45,8 @@ const Slideshow = () => {
 								Mejoramos tu marca
 							</span>
 							<h4
-								className='text-center mt-n2'
-								style={{
-									fontSize: '1.5rem',
-									position: 'relative',
-									bottom: '.9rem'
-								}}
+								className='text-center'
+								
 							>
 								con un trabajo prolijo y eficiente
 							</h4>
@@ -73,11 +65,7 @@ const Slideshow = () => {
 							</span>
 							<h4
 								className='text-center'
-								style={{
-									fontSize: '1.5rem',
-									position: 'relative',
-									bottom: '1.2rem'
-								}}
+								
 							>
 								minimalista, simple y atractivo
 							</h4>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import play from '../../assets/img/boton-de-play.svg';
 import redes from '../../assets/img/redes-sociales.svg';
 import laptop from '../../assets/img/laptop.svg';
