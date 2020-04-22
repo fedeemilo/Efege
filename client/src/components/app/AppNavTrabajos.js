@@ -30,12 +30,12 @@ function AppNavTrabajos(props) {
 					<NavbarToggler onClick={toggle} />
 					<Collapse isOpen={isOpen} navbar className='mt-5'>
 						<Nav className='ml-auto' navbar>
-							<NavItem style={{position: 'relative', bottom: '1.2rem', left: '3rem'}}>
+							<NavItem style={{position: 'relative', bottom: '1.6rem', left: '3rem'}}>
 								<BotonNeon />
 							</NavItem>
 							<NavItem>
 								<NavLink href='/'>
-									<img className='w-25 float-right mt-n4' src={home} alt='home' />
+									<img className='w-50 float-right mt-n5' src={home} alt='home' />
 								</NavLink>
 							</NavItem>
 						</Nav>

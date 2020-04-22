@@ -1,5 +1,10 @@
 img {
     width: 100%;
+    transform: scale(0.55);
+}
+
+.noti-pic {
+    transform: scale(0.9);
 }
 
 a {

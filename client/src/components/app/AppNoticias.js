@@ -21,18 +21,14 @@ import {
 import { Badge } from 'reactstrap';
 import axios from 'axios';
 import * as moment from 'moment';
+import { CapitalizeText } from '../utils';
 
 const theme = createMuiTheme({
 	typography: {
 		fontFamily: [
-			'"Segoe UI"',
-			'Roboto',
-			'"Helvetica Neue"',
 			'Arial',
 			'sans-serif',
-			'"Apple Color Emoji"',
-			'"Segoe UI Emoji"',
-			'"Segoe UI Symbol"'
+			'"Apple Color Emoji"'
 		].join(',')
 	}
 });
@@ -87,7 +83,7 @@ function AppNoticias(props) {
 			arr[i] = arr[j];
 			arr[j] = temp;
 		}
-		return arr;
+		return arr; 
 	}
 
 	useEffect(() => {
@@ -96,11 +92,9 @@ function AppNoticias(props) {
 			await axios
 				.get('/news')
 				.then((res) => {
-					// let shuffleData = shuffle(res.data);
 					let ascendingData = res.data.sort((a, b) => {
 						return a - b;
 					});
-					console.log(ascendingData);
 
 					setNoticias((noticias) => noticias.concat(ascendingData));
 					setCompleted(true);
@@ -112,16 +106,6 @@ function AppNoticias(props) {
 		axiosNoticias();
 	}, []);
 
-	/* Capitalizar texto */
-	const capitalizeText = (text) => {
-		if (text[0] === '¿') {
-			text =
-				text.charAt(0) + text[1].toUpperCase() + text.slice(2).toLowerCase();
-		} else {
-			text = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
-		}
-		return text;
-	};
 
 	/* Obtener la fecha del posteo */
 	const obtenerFecha = (noticia) => {
@@ -133,7 +117,6 @@ function AppNoticias(props) {
 
 	/* Noticia card */
 	const Noti = (n) => {
-		moment(n.noticia.date).get('year');
 		return (
 			<Grid lg={4} md={4} sm={6} xs={12} className={classes.grid}>
 				<Link href={`/noticias/${n.noticia._id}`}>
@@ -144,8 +127,7 @@ function AppNoticias(props) {
 							image={n.noticia.images[0].url}
 						/>
 						<CardHeader
-							title={capitalizeText(n.noticia.title)}
-							subheader={n.noticia.author}
+							title={CapitalizeText(n.noticia.title)}
 							className={classes.header}
 						/>
 					</Card>

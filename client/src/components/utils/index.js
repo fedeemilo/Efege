@@ -9,6 +9,7 @@ import JumboNoticias from './JumboNoticias';
 import Noticia from './Noticia';
 import Slideshow from './Slideshow';
 import Trabajos from './Trabajos';
+import CapitalizeText from './CapitalizeText';
 export {
 	BotonNeon,
 	CardComplex,
@@ -20,5 +21,6 @@ export {
 	JumboNoticias,
 	Noticia,
 	Slideshow,
-	Trabajos
+	Trabajos,
+	CapitalizeText
 };

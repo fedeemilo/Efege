@@ -3,7 +3,6 @@ import play from '../../assets/img/boton-de-play.svg';
 import redes from '../../assets/img/redes-sociales.svg';
 import laptop from '../../assets/img/laptop.svg';
 import Zoom from 'react-reveal/Zoom';
-import Button from '@material-ui/core/Button';
 import '../../assets/css/Cards.css';
 
 import {
@@ -46,17 +45,7 @@ const Cards = (props) => {
 										Hacemos videos comerciales, institucionales o empresariales
 										para que puedas mostrar al mundo tu empresa.
 									</CardText>
-									<Button
-										href='/video_marketing'
-										variant='outlined'
-										style={{
-											background: buttonColor,
-											fontSize: '120%',
-											color: '#fff'
-										}}
-									>
-										Ver Más
-									</Button>
+									
 								</CardBody>
 							</Card>
 						</Zoom>
@@ -81,17 +70,7 @@ const Cards = (props) => {
 										Mejoramos la imagen de tu marca haciéndola más conocida con
 										nuestros servicios de community management.
 									</CardText>
-									<Button
-										href='/manejo_redes'
-										variant='outlined'
-										style={{
-											background: buttonColor,
-											fontSize: '120%',
-											color: '#fff'
-										}}
-									>
-										Ver Más
-									</Button>
+					
 								</CardBody>
 							</Card>
 						</Zoom>
@@ -116,17 +95,7 @@ const Cards = (props) => {
 										Desarrollamos sitios web con diseños personalizados acorde a
 										los objetivos y la visión de tu negocio.
 									</CardText>
-									<Button
-										href='/diseño_web'
-										variant='outlined'
-										style={{
-											background: buttonColor,
-											fontSize: '120%',
-											color: '#fff'
-										}}
-									>
-										Ver Más
-									</Button>
+					
 								</CardBody>
 							</Card>
 						</Zoom>

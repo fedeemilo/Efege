@@ -4,6 +4,7 @@ import AppNav from '../app/AppNavTrabajos';
 import AppFooter from '../app/AppFooter';
 import ReactHtmlParser from 'react-html-parser';
 import '../../assets/css/Noticia.css';
+import { CapitalizeText } from './';
 
 import axios from 'axios';
 
@@ -16,17 +17,13 @@ export default function Noticia(props) {
 			await axios
 				.get(`/news/${props.match.params.id}`)
 				.then((res) => {
-					console.log(res.data);
-					console.log(typeof res.data);
-					console.log(res.data.images[0].url);
-
 					setNoticia(res.data);
 					setUrl(res.data.images[0].url);
 				})
 				.catch((err) => {
 					console.log(err);
 				});
-		}
+		};
 		axiosNoticia();
 	}, [props.match.params.id]);
 
@@ -39,9 +36,10 @@ export default function Noticia(props) {
 						<h2 className=''> {noticia.title} </h2>{' '}
 						<h4 className='font-italic text-capitalize'>
 							{' '}
-							{noticia.subtitle}{' '}
+							{CapitalizeText(noticia.subtitle)}{' '}
 						</h4>{' '}
-						<Media className='mx-auto w-75' src={url} />{' '}
+						<Media className='mx-auto w-75 noti-pic' src={url} />{' '}
+						<h5 className='font-italic'>Autor: {noticia.author}</h5>
 					</Container>{' '}
 				</Jumbotron>{' '}
 				<Media body> {ReactHtmlParser(noticia.description)} </Media>{' '}
