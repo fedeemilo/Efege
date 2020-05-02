@@ -17,6 +17,7 @@ import {
 
 function AppNav(props) {
 	const [isOpen, setIsOpen] = useState(false);
+	const [classN, setClassN] = useState('');
 
 	const toggle = () => setIsOpen(!isOpen);
 
@@ -24,14 +25,23 @@ function AppNav(props) {
 	const ref = useRef(null);
 	const handleScroll = () => {
 		setSticky(ref.current.getBoundingClientRect().top <= 0);
+		const distanceY = window.pageYOffset || document.documentElement.scrollTop;
+		const shrinkOn = 200;
+		console.log(distanceY);
+		console.log(typeof distanceY);
+
+		if (distanceY > shrinkOn) {
+			setClassN('smaller');
+			console.log(classN);
+		} else {
+			setClassN('transition-on');
+		}
+
+		
 	};
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
-
-		return () => {
-			window.removeEventListener('scroll', () => handleScroll);
-		};
 	}, []);
 
 	return (
@@ -42,7 +52,7 @@ function AppNav(props) {
 						color='white'
 						light
 						expand='md'
-						className='navig sticky-inner'
+						className={['navig  sticky-inner ', classN].join('')}
 					>
 						<NavbarBrand href='/'>
 							<img src={logo} alt='efege-logo' className='efege-logo' />
@@ -51,7 +61,7 @@ function AppNav(props) {
 						<NavbarToggler onClick={toggle} />
 						<Collapse isOpen={isOpen} navbar className='mt-4'>
 							<Nav className='ml-auto' navbar>
-								<NavItem>
+								<NavItem className='noticias-link'>
 									<BotonNeon />
 								</NavItem>
 								<NavItem>
@@ -65,7 +75,9 @@ function AppNav(props) {
 									</Scrollchor>
 								</NavItem>
 								<NavItem>
-									<NavLink href='/trabajos' className='nav-link'>Trabajos</NavLink>
+									<NavLink href='/trabajos' className='nav-link'>
+										Trabajos
+									</NavLink>
 								</NavItem>
 							</Nav>
 						</Collapse>

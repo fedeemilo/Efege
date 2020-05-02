@@ -1,18 +1,18 @@
-img {
-    width: 100%;
-    transform: scale(0.55);
+p img {
+	width: 100%;
+	transform: scale(0.55);
 }
 
 .noti-pic {
-    transform: scale(0.9);
+	transform: scale(0.9);
 }
 
 a {
-    text-decoration: none !important;
+	text-decoration: none !important;
 }
 
 iframe {
-    margin: 0 auto !important;
-    display: block;
-    width: 100%;
+	margin: 0 auto !important;
+	display: block;
+	width: 100%;
 }

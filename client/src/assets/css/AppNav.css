@@ -7,21 +7,24 @@ body {
 
 .navig {
     font-weight: 700;
+    transition: 1s;
 }
 
 .efege-logo {
-    width: 80px;
-    transform: scale(1.4);
+    width: 75px;
+    transform: scale(1.2);
     margin-top: 1rem;
     margin-bottom: 1.5rem;
     position: relative;
     top: .2rem;
+    left: 2.9rem;
 }
 
 .sticky-wrapper {
     position: relative;
-    height: 6rem; /* We need to change this value */
+    height: 4rem; /* We need to change this value */
     z-index: 2;
+    transition: 1s;
   }
   
   .sticky .sticky-inner {
@@ -30,7 +33,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1;
-    padding-left: 5.6rem;
+    transition: 1s;
   }
 
   .nav-link {
@@ -49,6 +52,30 @@ body {
     color: #ffffff !important;
   }
 
+  .smaller {
+    height: 5.8rem;
+    transition: 1s;
+  }
+
+  .smaller .efege-logo {
+    width: 60px;
+    transition: 1s;
+  }
+
+  .smaller .noticias-link {
+    transform: scale(0.8);
+    transition: 1s;
+  }
+
+  .smaller .nav-link {
+    transform: scale(0.8);
+    transition: 1s;
+  }
+
   .nav-link-noticia-home:hover {
     color: #ffffff !important;
+  }
+
+  .transition-on {
+    transition: 1s;
   }
